@@ -2,7 +2,7 @@
 # Laboratorio de Algoritmos y Estructuras de Datos
 
 
-## Matias Huacara Llanque
+## Huacara Llanque Matias
 ### 4° 1°
 
 Contenidos:
