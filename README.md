@@ -6,8 +6,8 @@
 ### 4° 1°
 
 Contenidos:
-*Etapa 1:Fundamentos de Programacion
-*Etapa 2:
-*Etapa 3:
-*Etapa 4:
+* Etapa 1:Fundamentos de Programacion
+* Etapa 2:
+* Etapa 3:
+* Etapa 4:
 
