@@ -1,0 +1,8 @@
+C:\Users\Lab AyED\Documents\12_HuacaraLlanque\4_MiResta\4_MiResta\bin\Debug\4_MiResta.exe.config
+C:\Users\Lab AyED\Documents\12_HuacaraLlanque\4_MiResta\4_MiResta\bin\Debug\4_MiResta.exe
+C:\Users\Lab AyED\Documents\12_HuacaraLlanque\4_MiResta\4_MiResta\bin\Debug\4_MiResta.pdb
+C:\Users\Lab AyED\Documents\12_HuacaraLlanque\4_MiResta\4_MiResta\obj\Debug\4_MiResta.exe
+C:\Users\Lab AyED\Documents\12_HuacaraLlanque\4_MiResta\4_MiResta\obj\Debug\4_MiResta.pdb
+C:\Users\Lab AyED\Documents\12_HuacaraLlanque\Etapa0\4_MiResta\4_MiResta\bin\Debug\4_MiResta.exe.config
+C:\Users\Lab AyED\Documents\12_HuacaraLlanque\Etapa0\4_MiResta\4_MiResta\obj\Debug\4_MiResta.exe
+C:\Users\Lab AyED\Documents\12_HuacaraLlanque\Etapa0\4_MiResta\4_MiResta\obj\Debug\4_MiResta.pdb
