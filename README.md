@@ -8,6 +8,6 @@
 Contenidos:
 * Etapa 1: Fundamentos de Programacion
 * Etapa 2: 
-* Etapa 3:
+* Etapa 3: 1
 * Etapa 4:
 
