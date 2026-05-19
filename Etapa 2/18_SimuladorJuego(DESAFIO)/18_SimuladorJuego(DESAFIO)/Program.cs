@@ -13,9 +13,9 @@ namespace _18_SimuladorJuego_DESAFIO_
             int vida = 10;
             int hambre = 10;
             int dia = 1;
-            int cantidad_de_comida_cruda = 1;
+            int cantidad_de_comida_cruda = 0;
             int cantidad_de_comida_cocida = 0;
-            int materiales_utiles = 15;
+            int materiales_utiles = 0;
             int opcion = 0;
             bool fogata = false;
             bool refugio = false;
@@ -61,7 +61,7 @@ namespace _18_SimuladorJuego_DESAFIO_
                         Console.Clear();
                         Console.WriteLine("Saliste a buscar comida");
                         Console.WriteLine(" ");
-                        probabilidad = rand.Next(1, 100);
+                        probabilidad = rand.Next(1, 101);
                         if (probabilidad <= 60)
                         {
                             Console.WriteLine("Y tuviste suerte si encontraste comida");
@@ -138,7 +138,7 @@ namespace _18_SimuladorJuego_DESAFIO_
                             Console.WriteLine("Ya tienes un refugio");
                             Console.WriteLine(" ");
                             Console.WriteLine("PRESIONE UNA TECLA PARA CONTINUAR");
-                            
+  
                         }
                         else if (refugio == false && materiales_utiles >=5)
                         {
@@ -150,6 +150,7 @@ namespace _18_SimuladorJuego_DESAFIO_
                             hambre = hambre - 2;
                             refugio = true;
                             refugio_estado = "Construido";
+                            materiales_utiles = materiales_utiles - 5;
 
                         }
                         break;
@@ -165,6 +166,7 @@ namespace _18_SimuladorJuego_DESAFIO_
                             hambre = hambre - 2;
                             fogata = true;
                             fogata_estado = "Encendido";
+                            materiales_utiles = materiales_utiles - 2;
                         }
                         else if (fogata == true)
                         {
@@ -185,7 +187,7 @@ namespace _18_SimuladorJuego_DESAFIO_
                         break;
                     case 5:
                         Console.Clear();
-                        if (fogata = true && cantidad_de_comida_cruda >= 1)
+                        if (fogata == true && cantidad_de_comida_cruda >= 1)
                         {
                             Console.WriteLine("Cocinaste una unidad de comida cruda");
                             Console.WriteLine(" ");
@@ -193,13 +195,13 @@ namespace _18_SimuladorJuego_DESAFIO_
                             cantidad_de_comida_cruda--;
                             cantidad_de_comida_cocida++;
                         }
-                        else if(cantidad_de_comida_cruda==0 && fogata==true)
+                        else if(fogata==true && cantidad_de_comida_cruda<=0)
                         {
                             Console.WriteLine("No tiene unidades de comida cruda para cocinar");
                             Console.WriteLine(" ");
                             Console.WriteLine("PRESIONE UNA TECLA PARA CONTINUAR");
                         }
-                       else if(cantidad_de_comida_cruda>=1 && fogata==false)
+                       else if(fogata==false && cantidad_de_comida_cruda>=1)
                         {
                             Console.WriteLine("Debes tener la fogata encendida para cocinar tu comida cruda");
                             Console.WriteLine(" ");
@@ -257,7 +259,7 @@ namespace _18_SimuladorJuego_DESAFIO_
                               
 
                             }
-                            if (vida >= 8)
+                            else if (vida >= 8)
                             {
                                 Console.WriteLine("Descansaste,sumaste 3 unidades de vida");
                                 Console.WriteLine(" ");
