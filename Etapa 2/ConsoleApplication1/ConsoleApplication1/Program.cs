@@ -10,45 +10,32 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            /*int numero;
-            int numero2;
-            int numero3;
-            Console.WriteLine("dime un numero entero:");
-            numero = int.Parse(Console.ReadLine());
-            Console.WriteLine("dime un numero entero:");
-            numero2 = int.Parse(Console.ReadLine());
-            Console.WriteLine("dime un numero entero:");
-            numero3 = int.Parse(Console.ReadLine());
-            int[] numeros = new int[3];
-            numeros[0] = numero;
- 
-            numeros[1] = numero2;
-            numeros[2] = numero3;
-            //for(int i =0;i<numeros.Length;i++)
-            
-            //foreach (int num in  numeros)
-           // {
-              //  Console.WriteLine("El número guardado es: " + num);
-                //if (numeros[i] > 5)
-                // {
-                // Console.Write("su numero " + numeros[i] + " ");
-                //}
-
-            //}*/
-            int[,] matriz = new int[2, 3];
-            matriz[0, 0] = 10;
-            matriz[0, 1] = 20;
-            matriz[1, 2] = 30;
-            for (int fila = 0; fila < matriz.GetLength(0); fila++)
+            int contador = 0;
+            int consulta;
+            int[] numero = { 2, 4, 6, 8, 10, 12, 14, 16 };
+            Console.WriteLine("Le pediremos un numero y le diremos si esta en la lista o no");
+            Console.WriteLine("Escriba un numero entero: ");
+            consulta = int.Parse(Console.ReadLine());
+            for (int i = 0; i < numero.Length; i++)
             {
-                for (int columna = 0; columna < matriz.GetLength(1); columna++)
+                if (consulta == numero[i])
                 {
-                    Console.Write(matriz[fila, columna] + " ");
+                    Console.WriteLine("Su numero si esta en la lista y en la posicion " + i);
                 }
-                Console.WriteLine();
-            }
+                if (consulta != numero[i])
+                {
+                    while (contador < 1)
+                    {
+                        Console.WriteLine("Su numero no esta en la lista");
+                        contador++;
+                    }
+                }
 
-            Console.ReadKey();
+
+
+
+                Console.ReadKey();
+            }
         }
     }
 }
