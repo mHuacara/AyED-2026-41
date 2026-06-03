@@ -10,25 +10,47 @@ namespace _1_LaFiestaDeStitch
     {
         static void Main(string[] args)
         {
+            int numero = 1;
+            int total_comida = 0;
             int promedio_de_comida_por_invitado;
             int cantidad_de_invitados;
-            int cantidad_de_comida;
             int comida_por_invitado;
             Console.WriteLine("Le pediremos que organize la fiesta de invitados de Stitch");
-            Console.WriteLine("Cuantos invitados son?: ");
+            Console.Write("Cuantos invitados son?: ");
             cantidad_de_invitados = int.Parse(Console.ReadLine());
-            Console.WriteLine("Cuanta comida daras a cada invitado?: ");
-            comida_por_invitado = int.Parse(Console.ReadLine());
-            while (comida_por_invitado < 1 || comida_por_invitado > 100)
+            Console.WriteLine(" ");
+            while (cantidad_de_invitados < 1 || cantidad_de_invitados >=101)
             {
-                Console.WriteLine("Lilo dijo que la cantidad de comida puede ser de 1 a 100 respeta lo dicho");
+                Console.WriteLine("Lilo dijo que la cantidad de invitados puede ser de 1 a 100, respeta lo dicho");
                 Console.WriteLine("");
-                Console.WriteLine("Cuanta comida daras a cada invitado?: ");
+                Console.Write("Cuantos invitados estaran en la fiesta?: ");
                 comida_por_invitado = int.Parse(Console.ReadLine());
+                Console.WriteLine(" ");
             }
-            cantidad_de_comida = comida_por_invitado * cantidad_de_invitados;
-            promedio_de_comida_por_invitado = cantidad_de_comida / cantidad_de_invitados;
-            Console.WriteLine("Cantidad promedio de comida para cada invitado"+promedio_de_comida_por_invitado);
+            Console.WriteLine(" ");
+            int[] cantidad_de_comida = new int[cantidad_de_invitados];
+            for (int i = 0; i < cantidad_de_invitados; i++)
+            {
+
+                Console.Write("Cuanta comida le daras al invitado numero "+numero+" : ");
+                cantidad_de_comida[i]= int.Parse(Console.ReadLine());
+                if(cantidad_de_comida[i]<1 || cantidad_de_comida[i]>=101)
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Recorda que Lilo dijo que lo minimo de comida para cada invitado es 1 y de maximo 100");
+                    Console.WriteLine("");
+                    Console.Write("Cuanta comida le daras al invitado numero " + numero + " : ");
+                    cantidad_de_comida[i] = int.Parse(Console.ReadLine());
+                }
+                numero++;
+            }
+            for(int n=0;n<cantidad_de_invitados;n++)
+            {
+                total_comida = total_comida + cantidad_de_comida[n];
+            }
+            promedio_de_comida_por_invitado = total_comida / cantidad_de_invitados;
+            Console.WriteLine(" ");
+            Console.WriteLine("La cantidad de comida promedio por invitado sera de: " + promedio_de_comida_por_invitado);
             Console.ReadKey();
         }
     }
