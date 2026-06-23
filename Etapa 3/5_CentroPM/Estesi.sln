@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5_CentroPM", "5_CentroPM\5_CentroPM.csproj", "{284E4610-C073-4873-AD84-D15B235FE805}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estesi", "Estesi\Estesi.csproj", "{4A006635-7803-4F9F-8434-102FEF87A59F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{284E4610-C073-4873-AD84-D15B235FE805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{284E4610-C073-4873-AD84-D15B235FE805}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{284E4610-C073-4873-AD84-D15B235FE805}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{284E4610-C073-4873-AD84-D15B235FE805}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A006635-7803-4F9F-8434-102FEF87A59F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A006635-7803-4F9F-8434-102FEF87A59F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A006635-7803-4F9F-8434-102FEF87A59F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A006635-7803-4F9F-8434-102FEF87A59F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
