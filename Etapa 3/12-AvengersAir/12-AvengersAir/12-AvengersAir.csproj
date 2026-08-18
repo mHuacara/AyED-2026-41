@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{13ECBA51-3727-4160-8166-A8E138167A38}</ProjectGuid>
+    <ProjectGuid>{1F793E7B-4982-4E6C-ACC1-B86EDBDE1FFF}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>_12_AvengersAir</RootNamespace>
