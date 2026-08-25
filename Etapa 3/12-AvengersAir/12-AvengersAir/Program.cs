@@ -98,6 +98,9 @@ namespace _12_AvengersAir
                         Console.Write("Ingrese su apellido: ");
                         string apellido = Console.ReadLine();
                         apellidos[posicion] = apellido;
+                        Console.Write("Ingrese su nacionalidad: ");
+                        string nacionalidad = Console.ReadLine();
+                        nacionalidades[posicion] = nacionalidad;
 
 
                         Console.ReadKey();
