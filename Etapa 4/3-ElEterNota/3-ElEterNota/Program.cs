@@ -10,8 +10,8 @@ namespace _3_ElEterNota
     {
         static void Main(string[] args)
         {
-            int cantidad_de_refugio = 0
-            int[,] matriz = new int[20,4];
+            int cantidad_de_refugio = 0;
+            int[,] matriz = new int[20,5];
             int opcion;
             do
             {
@@ -30,20 +30,62 @@ namespace _3_ElEterNota
                 switch (opcion)
                 {
                     case 1:
-                        if (cantidad_de_refugio < 20)
+                        int j = 0;
+                        int i = 0;
+                        if (cantidad_de_refugio > 20)
                         {
                             Console.WriteLine("El refugio esta lleno");
                         }
                         else
-                        {
-                            for (int j = 0; j < 5; j++)
+                        { 
+                            Console.WriteLine("Vas a añadir un refugio");
+                            Console.WriteLine("");
+                            Console.Write("Dime un codigo para el refugio: ");
+                            int codigo = int.Parse(Console.ReadLine());
+                            matriz[j, i] = codigo;
+                            i++;
+                            Console.Clear();
+                            Console.WriteLine("Capacidad maxima: 20 ");
+                            Console.Write("Dime la capacidad maxima del refugio: ");
+                            int capacidad_maxima = int.Parse(Console.ReadLine());
+                            matriz[j, i] = capacidad_maxima;
+                            while(capacidad_maxima>20)
+                            {
+                                Console.WriteLine("Ingrese de nuevo la capacidad maxima");
+                                Console.Write("Dime la capacidad maxima del refugio: ");
+                                capacidad_maxima = int.Parse(Console.ReadLine());
+                                matriz[j, i] = capacidad_maxima;
+                            }
+                            i++;
+                            Console.Clear();
+                            Console.Write("Dime los suministros disponibles del refugio");
+                            int suministros = int.Parse(Console.ReadLine());
+                            matriz[j, i] = suministros;
+                            while(suministros<0)
                             {
 
                             }
+                            i++;
+                            Console.WriteLine("");
+                            Console.WriteLine("En que zona esta ubicada el refugio?");
+                            Console.WriteLine("1. Norte(Congreso)");
+                            Console.WriteLine("2. Sur(Constitucion)");
+                            Console.WriteLine("3. Oeste(Flores)");
+                            Console.WriteLine("4. Centro(Microcentro)");
+                            Console.WriteLine("");
+                            Console.Write("Respuesta: ");
+                            int zona = int.Parse(Console.ReadLine());
+                            matriz[j, i] = zona;
+                            i++;
+                            Console.Write("Tiene personas alojadas el refugio?(Si=1 y No=0):");
+                            int ocupacion = int.Parse(Console.ReadLine());
+                            matriz[j, i] = ocupacion;
+                            i++;
+                            j++;
                         }
                         break;
                     case 2:
-                        // Lógica para mostrar todos los refugios
+                        
                         break;
                     case 3:
                         // Lógica para ocupar refugio
