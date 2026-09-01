@@ -113,5 +113,6 @@ namespace _3_ElEterNota
                 Console.ReadKey();
             } while (opcion != 8);
         }
+        static void agregarRefugio()
     }
 }
