@@ -43,15 +43,19 @@ namespace _3_ElEterNota1
                         break;
 
                     case 3:
+                        ocuparRefugio();
                         break;
 
                     case 4:
+                        mostrarRefugiosOcupados();
                         break;
 
                     case 5:
+                        refugioConMasSuministros();
                         break;
 
                     case 6:
+
                         break;
 
                     case 7:
@@ -186,26 +190,71 @@ namespace _3_ElEterNota1
         }
         static void ocuparRefugio()
         {
-            Console.WriteLine("Que refugio quieres ocupar?: ");
-            Console.WriteLine("");
-            for (int i = 0; i < refugios_registrados; i++) 
+            if (refugios_registrados == 0)
             {
-                if (matriz[i, 0] == 0)
+                Console.WriteLine("No hay refugios registrados.");
+            }
+            else
+            {
+                int codigo;
+                bool encontrado = false;
+
+                Console.Write("Ingrese el código del refugio: ");
+                codigo = int.Parse(Console.ReadLine());
+
+                for (int i = 0; i < refugios_registrados; i++)
                 {
-                    Console.WriteLine("Refugio " + i +": "+ matriz[i, 0]);
+                    if (matriz[i, 0] == codigo)
+                    {
+                        encontrado = true;
+
+                        if (matriz[i, 4] == 1)
+                        {
+                            Console.WriteLine("El refugio ya está ocupado.");
+                        }
+                        else
+                        {
+                            matriz[i, 4] = 1;
+                            Console.WriteLine("Refugio ocupado correctamente.");
+                        }
+                    }
+                }
+
+                if (encontrado == false)
+                {
+                    Console.WriteLine("No existe un refugio con ese código.");
                 }
             }
-            int refugio_seleccionado = int.Parse(Console.ReadLine());
-            while (matriz[refugio_seleccionado, 0] != 0)
-            {
-                Console.WriteLine("No somos Okupas, esto ya està ocupado");
-                Console.WriteLine(" ");
-                Console.Write("Que refugio quieres ocupar?: ");
-                refugio_seleccionado = int.Parse(Console.ReadLine());
-            }
         }
+        static void mostrarRefugiosOcupados()
+        {
+            bool hayOcupados = false;
+
+            for (int i = 0; i < refugios_registrados; i++)
+            {
+                if (matriz[i, 4] == 1)
+                {
+                    Console.WriteLine("Código: " + matriz[i, 0]);
+                    Console.WriteLine("Capacidad máxima: " + matriz[i, 1]);
+                    Console.WriteLine("Suministros: " + matriz[i, 2]);
+                    Console.WriteLine("Zona: " + matriz[i, 3]);
+                    Console.WriteLine("Ocupado: " + matriz[i, 4]);
+                    Console.WriteLine("-----------------------");
+
+                    hayOcupados = true;
+                }
+            }
+
+            if (hayOcupados == false)
+            {
+                Console.WriteLine("No hay refugios ocupados.");
+            }
+      
+        }
+        static void refugioConMasSuministros()
+    {
+
     }
 
+    }
 }
-
-
