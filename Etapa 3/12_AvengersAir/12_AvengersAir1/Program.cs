@@ -47,9 +47,6 @@ namespace _12_AvengersAir1
                         Console.Clear();
 
 
-                        Console.WriteLine("----------------------------------------");
-                        Console.WriteLine("VENDER ASIENTO");
-                        Console.WriteLine("----------------------------------------");
 
                         Console.WriteLine("Asientos disponibles:");
 
@@ -106,6 +103,15 @@ namespace _12_AvengersAir1
 
                             Console.Write("Ingrese el estado de ocupacion: ");
                             pasajeros[asiento - 1, 6] = Console.ReadLine();
+                            string auxiliar = pasajeros[asiento - 1, 6];
+                            int auxiliar1 = int.Parse(auxiliar);
+                            while (auxiliar1 >= 2 )
+                            {
+                                Console.WriteLine(" Si pone 1 el asiento estara establecido como ocupado \n Si pone 0 el asiento sera establecido como no ocupado");
+                                Console.Write("Ingrese el estado de ocupacion: ");
+                                pasajeros[asiento - 1, 6] = Console.ReadLine();
+                                auxiliar1 = int.Parse(pasajeros[asiento - 1, 6]);
+                            }
 
                             asientos_disponibles--;
                             asientos_ocupados++;
@@ -118,10 +124,6 @@ namespace _12_AvengersAir1
 
                     case 2:
                         Console.Clear();
-
-                        Console.WriteLine("----------------------------------------");
-                        Console.WriteLine("DEVOLVER ASIENTO");
-                        Console.WriteLine("----------------------------------------");
 
                         Console.Write("Ingrese el numero de asiento: ");
                         asientoDevolver = int.Parse(Console.ReadLine());
@@ -194,19 +196,47 @@ namespace _12_AvengersAir1
                         Console.ReadKey();
                         break;
                     case 5:
-                        //Para comprobar
-                        Console.WriteLine(pasajeros[asientoModificado - 1, 1]);
+                        string edad_busqueda;
+                        Console.Write("Que edad desea buscar?: ");
+                        edad_busqueda = Console.ReadLine();
+                        for (int i = 0; i < 80; i++)
+                        {
+                            if(edad_busqueda==pasajeros[i,3])
+                            {
+                                Console.WriteLine("Los pasajeros segun la edad buscada: ");
+                                Console.WriteLine("Pasajero " + i+1+": " + pasajeros[i, 3] + "\nNumero de asiento:"+asiento);
+                            }
+                        }
+                        Console.ReadKey();
+                        break;
+                    case 6:
+                        int dni = 0;
+                        for (int i = 0; i < 80; i++) 
+                        {
+                            dni = int.Parse(pasajeros[i, 4]);
+                            if (dni % 2 == 0) 
+                            {
+                                Console.WriteLine("Asientos con DNI par: ");
+                                Console.WriteLine("Asiento " + asiento + "|  DNI: " + dni);
+                            }
+                        }
+                        Console.ReadKey();
+                        break;
+                    case 7:
+                        Console.WriteLine("Saliendo del programa");
+                        Console.ReadKey();
+                        break;
+                        /* Console.WriteLine(pasajeros[asientoModificado - 1, 1]);
                         Console.WriteLine(pasajeros[asientoModificado - 1, 2]);
                         Console.WriteLine(pasajeros[asientoModificado - 1, 3]);
                         Console.WriteLine(pasajeros[asientoModificado - 1, 4]);
                         Console.WriteLine(pasajeros[asientoModificado - 1, 5]);
-                        Console.WriteLine(pasajeros[asientoModificado - 1, 6]);
-                        Console.ReadKey();
-                        break;
+                        Console.WriteLine(pasajeros[asientoModificado - 1, 6]);*/
 
                 }
-                
-        
+
+                Console.ReadKey();
+                Console.Clear();
 
                 
 
