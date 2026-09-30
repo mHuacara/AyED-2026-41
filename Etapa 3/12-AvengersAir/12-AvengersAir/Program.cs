@@ -45,9 +45,9 @@ namespace _12_AvengersAir
             {
                 Console.Clear();
 
-                Console.WriteLine("----------------------------------------");
+                Console.WriteLine("-------------------------------------------------------------");
                 Console.WriteLine("Menu Principal - AvengersAir Vuelo Buenos Aires a Wakanda");
-                Console.WriteLine("----------------------------------------");
+                Console.WriteLine("-------------------------------------------------------------");
                 Console.WriteLine("Asientos Disponibles: " + asientos_disponibles);
                 Console.WriteLine("Asientos Ocupados: " + asientos_ocupados);
                 Console.WriteLine("1. Vender Asiento");
@@ -69,9 +69,7 @@ namespace _12_AvengersAir
                         {
                             if (asientos[i, 2] == "")
                             {
-                                Console.WriteLine(
-                                    "Asiento " + asientos[i, 0] +
-                                    " - " + asientos[i, 1]);
+                                Console.WriteLine( "Asiento " + asientos[i, 0] + " - " + asientos[i, 1]);
                             }
                         }
 
@@ -197,87 +195,42 @@ namespace _12_AvengersAir
                                     estado = "Libre";
                                 }
 
-                                Console.WriteLine(
-                                    "Asiento " + asientos[i, 0] +
-                                    " - " + asientos[i, 2] + " " +
-                                    asientos[i, 3] +
-                                    " - Edad: " + asientos[i, 4] +
-                                    " - DNI: " + asientos[i, 5] +
-                                    " - Nacionalidad: " + asientos[i, 6] +
-                                    " - Estado: " + estado);
+                                Console.WriteLine("Asiento " + asientos[i, 0] + " - " + asientos[i, 2] + " " +asientos[i, 3] + " - Edad: " + asientos[i, 4] + " - DNI: " + asientos[i, 5] + " - Nacionalidad: " + asientos[i, 6] + " - Estado: " + estado);
                             }
                         }
+                        Console.Write("Ingrese el número de asiento que desea modificar: ");
+                        int asientoModificar = int.Parse(Console.ReadLine());
 
-                        Console.Write("Ingrese el numero de asiento a modificar: ");
-                        numero = int.Parse(Console.ReadLine());
-
-                        posicion = numero - 1;
-
-                        if (posicion >= 0 && posicion < 80)
+                        if (asientoModificar >= 1 && asientoModificar <= 80)
                         {
-                            if (asientos[posicion, 2] != "")
-                            {
-                                string estadoAnterior = asientos[posicion, 7];
+                            int fila = asientoModificar - 1;
 
-                                Console.Write("Ingrese nombre: ");
-                                asientos[posicion, 2] = Console.ReadLine();
+                            Console.WriteLine();
+                            Console.WriteLine("| N° Asiento | Tipo de Asiento | Nombre | Apellido | Edad |      DNI      | Nacionalidad | Ocupado |");
 
-                                Console.Write("Ingrese apellido: ");
-                                asientos[posicion, 3] = Console.ReadLine();
+                            Console.WriteLine("      " + asientos[fila, 0] + "         " + asientos[fila, 1] + "    " + asientos[fila, 2] + "        " + asientos[fila, 3] + "          " + asientos[fila, 4] + "        " + asientos[fila, 5] + "             " + asientos[fila, 6] + "              " + asientos[fila, 7]);
+                            Console.WriteLine();
+                            Console.Write("Ingrese el nuevo nombre: ");
+                            asientos[fila, 2] = Console.ReadLine();
 
-                                Console.Write("Ingrese edad: ");
-                                asientos[posicion, 4] = Console.ReadLine();
+                            Console.Write("Ingrese el nuevo apellido: ");
+                            asientos[fila, 3] = Console.ReadLine();
 
-                                Console.Write("Ingrese DNI: ");
-                                asientos[posicion, 5] = Console.ReadLine();
+                            Console.Write("Ingrese la nueva edad: ");
+                            asientos[fila, 4] = Console.ReadLine();
 
-                                Console.Write("Ingrese nacionalidad: ");
-                                asientos[posicion, 6] = Console.ReadLine();
+                            Console.Write("Ingrese el nuevo DNI: ");
+                            asientos[fila, 5] = Console.ReadLine();
 
-                                int estado = -1;
+                            Console.Write("Ingrese la nueva nacionalidad: ");
+                            asientos[fila, 6] = Console.ReadLine();
 
-                                while (estado != 1 && estado != 0)
-                                {
-                                    Console.Write("Ingrese el estado de ocupacion (1 = Ocupado / 0 = Libre): ");
-                                    estado = int.Parse(Console.ReadLine());
-
-                                    if (estado == 1)
-                                    {
-                                        asientos[posicion, 7] = "true";
-                                    }
-                                    else if (estado == 0)
-                                    {
-                                        asientos[posicion, 7] = "false";
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("Opcion incorrecta. Ingrese 1 o 0.");
-                                    }
-                                }
-
-                                if (estadoAnterior == "false" && asientos[posicion, 7] == "true")
-                                {
-                                    asientos_ocupados++;
-                                }
-
-                                if (estadoAnterior == "true" && asientos[posicion, 7] == "false")
-                                {
-                                    asientos_ocupados--;
-                                }
-
-                                Console.WriteLine("Asiento modificado correctamente.");
-                            }
-                            else
-                            {
-                                Console.WriteLine("El asiento esta libre.");
-                            }
+                            Console.WriteLine("Asiento modificado correctamente.");
                         }
                         else
                         {
-                            Console.WriteLine("Numero de asiento incorrecto.");
+                            Console.WriteLine("Número de asiento no válido.");
                         }
-
-                        Console.WriteLine("Presione una tecla para volver al menu...");
                         Console.ReadKey();
                         break;
 
@@ -314,6 +267,7 @@ namespace _12_AvengersAir
                         Console.WriteLine("Salidas de Emergencia: $" + total_emergencia);
                         Console.WriteLine("Economica: $" + total_economica);
                         Console.WriteLine("------------------------------");
+                        Console.WriteLine(" ");
                         Console.WriteLine("Total de ventas: $" + total);
 
                         Console.WriteLine("Presione una tecla para volver al menu...");
@@ -334,10 +288,7 @@ namespace _12_AvengersAir
 
                                 if (edadPasajero == edad)
                                 {
-                                    Console.WriteLine(
-                                        "Asiento: " + asientos[i, 0] +
-                                        " - " + asientos[i, 2] +
-                                        " " + asientos[i, 3]);
+                                    Console.WriteLine( "Asiento: " + asientos[i, 0] + " - " + asientos[i, 2] +  " " + asientos[i, 3]);
 
                                     encontrado = true;
                                 }
