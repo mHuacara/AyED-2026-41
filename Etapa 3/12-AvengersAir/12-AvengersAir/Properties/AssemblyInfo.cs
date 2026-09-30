@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("12_AvengersAir1")]
+[assembly: AssemblyTitle("12-AvengersAir")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("12_AvengersAir1")]
+[assembly: AssemblyProduct("12-AvengersAir")]
 [assembly: AssemblyCopyright("Copyright ©  2026")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a92d46ef-52fc-43b3-afe0-6a3fed83f9d1")]
+[assembly: Guid("f0f15c37-a6fc-499b-80f9-57cc9aa5e5c1")]
 
 // Version information for an assembly consists of the following four values:
 //
