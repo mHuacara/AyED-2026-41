@@ -149,7 +149,6 @@ namespace _13_PERO
                     case 3:
                         Console.Write("Ingrese el ID de la misión: ");
                         int idBuscar = int.Parse(Console.ReadLine());
-
                         bool encontrada = false;
 
                         for (int i = 0; i < cantidad; i++)
@@ -269,7 +268,7 @@ namespace _13_PERO
 
                             if (cantidadMapa > 0)
                             {
-                                double promedio = (double)suma / cantidadMapa;
+                                int promedio = (int)suma / cantidadMapa;
                                 Console.WriteLine(promedio);
                             }
                             else
