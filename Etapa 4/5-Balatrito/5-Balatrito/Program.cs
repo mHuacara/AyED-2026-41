@@ -139,7 +139,7 @@ namespace _5_Balatrito
             }
             else if(pares>=1)
             {
-                tipo = "par";
+                tipo = "Par";
             }
             return tipo;
         }
@@ -180,7 +180,25 @@ namespace _5_Balatrito
         }
         static double Multiplicador(string tipo)
         {
-            double=   
+            double mult = 1.0;
+            if (tipo == "Par")
+            {
+                mult = 1.5;
+            }
+            else if(tipo=="Trio")
+            {
+                mult = 2.5;
+            }
+            else if(tipo=="Full")
+            {
+                mult = 3.5;
+            }
+            else if(tipo=="Poker")
+            {
+                mult = 4.0;
+            }
+            return mult;
+
         }
     }
 }
