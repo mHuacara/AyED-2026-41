@@ -13,24 +13,24 @@ namespace _5_Balatrito
             Console.WriteLine("=== MINI BALATRO ===");
             Console.WriteLine();
             // Generar una mano aleatoria de 5 cartas
-            string[] mano = GenerarManoAleatoria();
+            string[] mano = generarManoAleatoria();
             // Analizar que tipo de mano se obtuvo
-            string tipo = TipoDeMano(mano);
+            string tipo = tipoDeMano(mano);
             // Calcular el valor de las cartas
-            int basePts = PuntajeBase(mano);
+            int basePts = puntajeBase(mano);
             // Obtener el multiplicador de la jugada
-            double mult = Multiplicador(tipo);
+            double mult = multiplicador(tipo);
             // Calcular puntaje antes de Jokers
             double total = basePts * mult;
             // Jokers disponibles
             bool jokerX2 = true;
             bool jokerMas10 = true;
             // Aplicar los efectos de los Jokers
-            total = AplicarJokers(total, jokerX2, jokerMas10);
+            total = aplicarJokers(total, jokerX2, jokerMas10);
             // Mostrar el resultado
-            MostrarResumen(mano, tipo, basePts, mult, total);
+            mostrarResumen(mano, tipo, basePts, mult, total);
         }
-        static string[] GeneraManoAleatoria()
+        static string[] generarManoAleatoria()
         {
             Random rand = new Random();
             string[] rangos = { "A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2" };
@@ -45,7 +45,7 @@ namespace _5_Balatrito
             return mano;
         }
 
-        static string TipoDeMano(string[]mano)
+        static string tipoDeMano(string[]mano)
         {
             int[] cantidad = new int[12];
             for (int i = 0; i < 6; i++)
@@ -143,7 +143,7 @@ namespace _5_Balatrito
             }
             return tipo;
         }
-        static int PuntajerBase(string[] mano)
+        static int puntajeBase(string[] mano)
         {
             int total = 0;
             for (int i = 0; i < 5; i++)
@@ -178,7 +178,7 @@ namespace _5_Balatrito
             }
             return total;
         }
-        static double Multiplicador(string tipo)
+        static double multiplicador(string tipo)
         {
             double mult = 1.0;
             if (tipo == "Par")
@@ -198,6 +198,9 @@ namespace _5_Balatrito
                 mult = 4.0;
             }
             return mult;
+        }
+        static double aplicarJokers(double puntaje, bool x2,bool mas_10)
+        {
 
         }
     }
